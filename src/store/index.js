@@ -42,6 +42,16 @@ export default createStore({
       let res = await fetch(dataUrl)
       let {about} = await res.json()
       context.commit('setAbout', about)
+    },
+    async fetchEducation(context) {
+      let res = await fetch(dataUrl)
+      let {education} = await res.json()
+      context.commit('setEducation', education)
+    },
+    async fetchSkills(context) {
+      let res = await fetch(dataUrl)
+      let {skills} = await res.json()
+      context.commit('setSkills', skills)
     }
   },
   modules: {
