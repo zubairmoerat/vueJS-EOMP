@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <h1>Welcome</h1>
+      <h1>Welcome to my Portfolio</h1>
     </div>
     <div class="row d-flex">
       <div class="col" v-if="jobTitle">
