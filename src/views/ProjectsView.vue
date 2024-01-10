@@ -1,12 +1,12 @@
 <template>
     <h2>My Work</h2>
-    <div class="row d-flex">
+    <div class="container-fluid">
         <div class="col" v-if="Projects">
-            <div class="card" v-for="pro in Projects" :key="pro">
+            <div class="card m-3" v-for="pro in Projects" :key="pro">
                 <div class="card-body">
-                    <img :src="pro.image" class="card-img-top h-25 w-25" alt="projectImage">
-                    <h5 class="card-title">{{ pro.name }}</h5>
-                    <p>{{ pro.description }}</p>
+                    <img :src="pro.image" class="card-img-top h-50 w-50" alt="projectImage">
+                    <h5 class="card-title text-center">{{ pro.name }}</h5>
+                    <p class="text-center">{{ pro.description }}</p>
                     <a :href="pro.gitHub" type="button" class="btn btn-secondary" target="_blank">Github</a>
                     <a :href="pro.netlify" type="button" class="btn btn-primary" target="_blank">Netlify</a>
                 </div>
@@ -30,4 +30,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.card{
+    width: 300px;
+}
+</style>

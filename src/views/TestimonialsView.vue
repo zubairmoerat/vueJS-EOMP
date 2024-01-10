@@ -1,6 +1,6 @@
 <template>
     <h1>Reviews</h1>
-    <div class="row" v-if="Testimonials">
+    <div class="row d-flex" v-if="Testimonials">
         <label class="card-wrap" v-for="testimonial in Testimonials" :key="testimonial">
             <input type="checkbox" class="flipcard">
             <div class="card">

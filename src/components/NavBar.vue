@@ -1,8 +1,8 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                    <img class="img-thumbnail" src="https://drive.google.com/uc?id=1Uawwx3E8Yfw8vMGHBGycEhHsceacEClP" loading="lazy" alt="logo">
+                <img class="img-fluid" src="https://drive.google.com/uc?id=1Uawwx3E8Yfw8vMGHBGycEhHsceacEClP" loading="lazy" alt="logo">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,4 +28,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+img {
+    width: 100px;
+    height: 50px;
+}
+</style>
