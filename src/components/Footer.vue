@@ -1,7 +1,7 @@
 <template>
-    <div class="container-fluid position-relative bg-body-tertiary">
+    <div class="container-fluid" id="footer">
         <div class="row">
-            <p class="lead text-start">Zubair Moerat &copy; <span>{{ currYear }}</span></p>
+            <p class="lead text-start">Zubair Moerat's Portfolio &copy; <span>{{ currYear }}</span></p>
         </div>
     </div>
 </template>

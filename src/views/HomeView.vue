@@ -1,14 +1,12 @@
 <template>
   <div class="container-fluid">
+    <h1 class="text-center">Welcome to my Portfolio</h1>
     <div class="row">
-      <h1>Welcome to my Portfolio</h1>
-    </div>
-    <div class="row d-flex">
       <div class="col" v-if="Home">
         <h3 v-for="title in Home" :key="title">{{ title }}</h3>
       </div>
       <div class="col">
-        <img class="img-fluid" src="https://drive.google.com/uc?id=1G3WJXBiXyM8o8wr1XLjRBQA2IIsjvZBr" alt="portfolio" loading="lazy">
+        <img class="img-fluid" src="https://drive.google.com/uc?id=1E--WvyB8NWDuQp1XU7LQRPplxTil0GtS" alt="portfolio" loading="lazy">
       </div>
     </div>
   </div>
@@ -29,3 +27,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+img {
+  width: 300px;
+  height: 300px;
+  padding-bottom: 50px;
+}
+</style>

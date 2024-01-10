@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 *,
 *::after,
 *::before{
@@ -6,19 +7,22 @@
     box-sizing: border-box;
 }
 #app{
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
+    font-family: 'Roboto Mono', monospace;
+    background: #8D8C8A;
+    height: 100%;
 }
 nav{
-    padding: 30px;
+    background: #363538;
 }
 nav a{
-    font-weight: bold;
-    color: #2c3e50;
+    color: #F6F6F6;
 }  
 nav a.router-link-exact-active{
-    color: #42b983;
+    color: #408697;
+}
+#footer{
+    background: #363538;
+    color: #F6F6F6;
+    position: relative;
+    bottom: 0;
 }
