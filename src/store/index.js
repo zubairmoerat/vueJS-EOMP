@@ -1,9 +1,9 @@
 import { createStore } from 'vuex'
-const dataUrl = 'https://zubairmoerat.github.io/vueportfolioData/data/'
+const dataUrl = 'https://zubairmoerat.github.io/zubairmoeratData/data/'
 
 export default createStore({
   state: {
-    jobTitle: null,
+    home: null,
     about: null,
     education: null,
     skills: null,
@@ -13,8 +13,8 @@ export default createStore({
   getters: {
   },
   mutations: {
-    setJobTitle(state, value){
-      state.jobTitle = value
+    setHome(state, value){
+      state.home = value
     },
     setAbout(state, value){
       state.about = value
@@ -33,10 +33,10 @@ export default createStore({
     }
   },
   actions: {
-    async fetchJobTitle(context) {
+    async fetchHome(context) {
       let res = await fetch(dataUrl)
-      let {jobTitle} = await res.json()
-      context.commit('setJobTitle', jobTitle)
+      let {home} = await res.json()
+      context.commit('setHome', home)
     },
     async fetchAbout(context) {
       let res = await fetch(dataUrl)
@@ -52,6 +52,11 @@ export default createStore({
       let res = await fetch(dataUrl)
       let {skills} = await res.json()
       context.commit('setSkills', skills)
+    },
+    async fetchProjects(context) {
+      let res = await fetch(dataUrl)
+      let {projects} = await res.json()
+      context.commit('setProjects', projects)
     }
   },
   modules: {
