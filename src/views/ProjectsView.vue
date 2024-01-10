@@ -4,7 +4,7 @@
         <div class="col" v-if="Projects">
             <div class="card" v-for="pro in Projects" :key="pro">
                 <div class="card-body">
-                    <img :src="pro.image" class="card-img-top" alt="projectImage">
+                    <img :src="pro.image" class="card-img-top h-25 w-25" alt="projectImage">
                     <h5 class="card-title">{{ pro.name }}</h5>
                     <p>{{ pro.description }}</p>
                     <a :href="pro.gitHub" type="button" class="btn btn-secondary" target="_blank">Github</a>

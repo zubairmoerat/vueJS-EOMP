@@ -57,6 +57,11 @@ export default createStore({
       let res = await fetch(dataUrl)
       let {projects} = await res.json()
       context.commit('setProjects', projects)
+    },
+    async fetchTestimonials(context) {
+      let res = await fetch(dataUrl)
+      let {testimonials} = await res.json()
+      context.commit('setTestimonials', testimonials)
     }
   },
   modules: {
