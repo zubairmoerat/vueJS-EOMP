@@ -1,12 +1,12 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <h1 class="text-center">Welcome to my Portfolio</h1>
     <div class="row">
       <div class="col" v-if="Home">
-        <h3 v-for="title in Home" :key="title">{{ title }}</h3>
+        <h3 class="text-center" v-for="title in Home" :key="title">{{ title }}</h3>
       </div>
       <div class="col">
-        <img class="img-fluid" src="https://drive.google.com/uc?id=1E--WvyB8NWDuQp1XU7LQRPplxTil0GtS" alt="portfolio" loading="lazy">
+        <img class="img-fluid rounded-5" src="https://iili.io/J760HNf.md.jpg" alt="portfolio" loading="lazy">
       </div>
     </div>
   </div>
@@ -29,9 +29,27 @@ export default {
 </script>
 
 <style scoped>
-img {
-  width: 300px;
-  height: 300px;
-  padding-bottom: 50px;
+img{
+  box-shadow: 0 3px 5px #e9322e;
+  margin-left: 50px;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+.col{
+  flex-basis: 50%;
+}
+.container h1{
+padding-top: 20px;
+padding-bottom:  20px;
+text-decoration: underline;
+text-shadow: 0 2px 1px black;
+}
+.col h3{
+  text-shadow: 0 2px 1px #e9322e;
 }
 </style>

@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 *,
 *::after,
 *::before{
@@ -7,22 +6,22 @@
     box-sizing: border-box;
 }
 #app{
-    font-family: 'Roboto Mono', monospace;
-    background: #8D8C8A;
-    height: 100%;
+    height: 100vh;
+    background: #959794;
 }
 nav{
-    background: #363538;
+    background: #45433e;
 }
 nav a{
-    color: #F6F6F6;
+    color: #959794;
+    text-decoration: none;
 }  
 nav a.router-link-exact-active{
-    color: #408697;
+    color: #e9322e;
 }
 #footer{
-    background: #363538;
-    color: #F6F6F6;
-    position: relative;
+    background: #45433e;
+    color: #959794;
+    position: fixed;
     bottom: 0;
 }

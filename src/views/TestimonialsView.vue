@@ -1,5 +1,5 @@
 <template>
-    <h1>Reviews</h1>
+    <h2 class="text-center">Reviews</h2>
     <div class="row d-flex" v-if="Testimonials">
         <label class="card-wrap" v-for="testimonial in Testimonials" :key="testimonial">
             <input type="checkbox" class="flipcard">
@@ -33,12 +33,18 @@ export default {
 
 <style scoped>
 .card-wrap {
-    display: block;
-    width: 500px;
+    display: flex;
+    width: 200px;
     max-width: 100%;
-    height: 500px;
+    height: 400px;
     margin: 0 auto;
     margin-bottom: 15px;
+}
+h2{
+padding-top: 20px;
+padding-bottom:  20px;
+text-decoration: underline;
+text-shadow: 0 2px 1px black;
 }
 
 .card, .front, .back, .card-photo{
@@ -64,11 +70,11 @@ export default {
 }
 
 .card:hover {
-    box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149);
+    box-shadow: 0 1px 3px 0 #45433e, 0 4px 8px 3px #e9322e;
 }
 
 .back {
-    background-color: white;
+    background: #45433e;
     transform: rotateY( 180deg );
     text-align: center;
     border-radius: 10px;
@@ -80,6 +86,7 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #fff;
 }
 
 .flipcard {
