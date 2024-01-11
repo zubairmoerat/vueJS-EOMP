@@ -1,21 +1,26 @@
 <template>
-    <h2>My Experience</h2>
-    <div class="container-fluid">
-        <ul v-if="Education">
-            <li v-for="title in Education" :key="title">
-                <label>{{ title.year }}</label>
-                <div>
-                    <h5>{{ title.place }}</h5>
-                    <p>{{ title.description }}</p>
-                </div>
-            </li>
-        </ul>
+    <h2 class="text-center">My Experience</h2>
+    <div class="container-fluid text-center" v-if="Education">
+        <button class="btn m-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            View My Resume
+        </button>
+        <div class="collapse" id="collapseExample" v-for="certificate in Education" :key="certificate">
+            <div class="card card-body mx-auto">
+                <h5>{{ certificate.year }}</h5>
+                <p>{{ certificate.place }}</p>
+                <p>{{ certificate.description }}</p>
+            </div>
+        </div>
     </div>
-    <h2>My Skills</h2>
-    <div class="row" v-if="Skills">
-        <div class="col" v-for="title in Skills" :key="title">
-            <h5>{{ title.title }}</h5>
-            <p>{{ title.experience }}</p>
+    <div class="container">
+        <h2 class="text-center">My Skills</h2>
+        <div class="skillWrapper" v-if="Skills">
+            <div class="skill" v-for="title in Skills" :key="title">
+                <h5>{{ title.title }}</h5>
+                <img :src="title.image" alt="skill" class="img-fluid w-50 h-50">
+                <p class="ree">{{ title.experience }}</p>
+            </div>
         </div>
     </div>
 </template>
@@ -34,9 +39,46 @@ export default {
     },
     mounted() {
         this.$store.dispatch('fetchEducation'),
-        this.$store.dispatch('fetchSkills')
+            this.$store.dispatch('fetchSkills')
     }
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.btn{
+    border: 1px solid #45433e;
+    box-shadow: 0 1px 2px #e9322e;
+    background: #45433e;
+    color: #fff;
+}
+.card{
+    background: #45433e;
+    color: #fff;
+    box-shadow: 0 3px 5px #e9322e;
+    width: 450px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+h2{
+padding-top: 20px;
+padding-bottom:  20px;
+text-decoration: underline;
+text-shadow: 0 2px 1px black;
+}
+.skillWrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+h5{
+    text-shadow: 0 2px 1px #e9322e;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.ree{
+    text-decoration: underline;
+}
+.skill{
+    padding-top: 40px;
+}
+
+</style>
