@@ -13,56 +13,72 @@ export default createStore({
   getters: {
   },
   mutations: {
-    setHome(state, value){
+    setHome(state, value) {
       state.home = value
     },
-    setAbout(state, value){
+    setAbout(state, value) {
       state.about = value
     },
-    setEducation(state, value){
+    setEducation(state, value) {
       state.education = value
     },
-    setSkills(state, value){
+    setSkills(state, value) {
       state.skills = value
     },
-    setTestimonials(state, value){
+    setTestimonials(state, value) {
       state.testimonials = value
     },
-    setProjects(state, value){
+    setProjects(state, value) {
       state.projects = value
     }
   },
   actions: {
     async fetchHome(context) {
-      let res = await fetch(dataUrl)
-      let {home} = await res.json()
-      context.commit('setHome', home)
-    },
-    async fetchAbout(context) {
-      let res = await fetch(dataUrl)
-      let {about} = await res.json()
-      context.commit('setAbout', about)
+      try {
+        let res = await fetch(dataUrl)
+        let { home } = await res.json()
+        context.commit('setHome', home)
+      } catch (e) {
+        console.error('Error fetching Data', e)
+      }
     },
     async fetchEducation(context) {
-      let res = await fetch(dataUrl)
-      let {education} = await res.json()
-      context.commit('setEducation', education)
+      try {
+        let res = await fetch(dataUrl)
+        let { education } = await res.json()
+        context.commit('setEducation', education)
+      } catch (e) {
+        console.error('Error fetching Data', e)
+      }
     },
     async fetchSkills(context) {
-      let res = await fetch(dataUrl)
-      let {skills} = await res.json()
-      context.commit('setSkills', skills)
+      try {
+        let res = await fetch(dataUrl)
+        let { skills } = await res.json()
+        context.commit('setSkills', skills)
+      } catch (e) {
+        console.error('Error fetching Data', e)
+      }
     },
     async fetchProjects(context) {
-      let res = await fetch(dataUrl)
-      let {projects} = await res.json()
-      context.commit('setProjects', projects)
+      try {
+        let res = await fetch(dataUrl)
+        let { projects } = await res.json()
+        context.commit('setProjects', projects)
+      } catch (e) {
+        console.error('Error fetching Data', e)
+      }
+
     },
     async fetchTestimonials(context) {
-      let res = await fetch(dataUrl)
-      let {testimonials} = await res.json()
-      context.commit('setTestimonials', testimonials)
-    }
+      try {
+        let res = await fetch(dataUrl)
+        let { testimonials } = await res.json()
+        context.commit('setTestimonials', testimonials)
+      } catch (e) {
+        console.error('Error fetching Data', e)
+      }
+    },
   },
   modules: {
   }

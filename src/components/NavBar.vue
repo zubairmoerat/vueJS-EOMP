@@ -9,7 +9,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link fs-2 ps-5"><router-link to="/">Home</router-link></a> 
+                        <a class="nav-link fs-2 ps-5"><router-link to="/">Home</router-link></a>
                         <a class="nav-link fs-2 ps-5"><router-link to="/about">About Me</router-link></a>
                         <a class="nav-link fs-2 ps-5"><router-link to="/resume">Resume</router-link></a>
                         <a class="nav-link fs-2 ps-5"><router-link to="/projects">Projects</router-link></a>
@@ -33,7 +33,8 @@ img {
     width: 100px;
     height: 50px;
 }
-button{
+
+button {
     background: #959794;
     box-shadow: 0 1px 2px #e9322e;
 }
