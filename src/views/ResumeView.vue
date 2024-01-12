@@ -2,7 +2,7 @@
     <h2 class="text-center">My Experience</h2>
     <div class="container-fluid text-center" v-if="Education">
         <span class="btn"><a
-                href="https://docs.google.com/document/d/1Bvq44S1lATJNd7o3GvBbyo7qoo1x_ynM-kew4N8dBo0/edit?usp=sharing"
+                href="https://drive.google.com/file/d/1FaQv-Dw0k4XwY6XPpobq2QV2f5i2n-Fv/view?usp=drive_link"
                 target="_blank">Download CV</a></span>
         <button class="btn m-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
             aria-expanded="false" aria-controls="collapseExample">
