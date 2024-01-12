@@ -7,7 +7,7 @@
 }
 #app{
     height: 100vh;
-    background: #959794;
+    background: radial-gradient(#959794,#45433e);
 }
 nav{
     background: #45433e;
@@ -24,4 +24,13 @@ nav a.router-link-exact-active{
     color: #959794;
     position: fixed;
     bottom: 0;
+}
+@media(max-width:351px) {
+    #app {
+        background: radial-gradient(#959794,#45433e);
+        height: auto;
+    }
+    #footer{
+        position: relative;
+    }
 }

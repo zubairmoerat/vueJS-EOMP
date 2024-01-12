@@ -1,6 +1,9 @@
 <template>
     <h2 class="text-center">My Experience</h2>
     <div class="container-fluid text-center" v-if="Education">
+        <span class="btn"><a
+                href="https://docs.google.com/document/d/1Bvq44S1lATJNd7o3GvBbyo7qoo1x_ynM-kew4N8dBo0/edit?usp=sharing"
+                target="_blank">Download CV</a></span>
         <button class="btn m-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
             aria-expanded="false" aria-controls="collapseExample">
             View My Resume
@@ -16,10 +19,9 @@
     <div class="container">
         <h2 class="text-center">My Skills</h2>
         <div class="skillWrapper" v-if="Skills">
-            <div class="skill" v-for="title in Skills" :key="title">
+            <div class="skill text-center" v-for="title in Skills" :key="title">
                 <h5>{{ title.title }}</h5>
                 <img :src="title.image" alt="skill" class="img-fluid w-50 h-50">
-                <p class="ree">{{ title.experience }}</p>
             </div>
         </div>
     </div>
@@ -45,13 +47,20 @@ export default {
 </script>
 
 <style scoped>
-.btn{
+a:link {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+}
+
+.btn {
     border: 1px solid #45433e;
     box-shadow: 0 1px 2px #e9322e;
     background: #45433e;
     color: #fff;
 }
-.card{
+
+.card {
     background: #45433e;
     color: #fff;
     box-shadow: 0 3px 5px #e9322e;
@@ -59,26 +68,35 @@ export default {
     margin-top: 15px;
     margin-bottom: 15px;
 }
-h2{
-padding-top: 20px;
-padding-bottom:  20px;
-text-decoration: underline;
-text-shadow: 0 2px 1px black;
+
+h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: underline;
+    text-shadow: 0 2px 1px black;
 }
-.skillWrapper{
+
+.skillWrapper {
     display: flex;
     justify-content: space-evenly;
 }
-h5{
+
+h5 {
     text-shadow: 0 2px 1px #e9322e;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.ree{
-    text-decoration: underline;
-}
-.skill{
+
+.skill {
     padding-top: 40px;
 }
 
-</style>
+@media (max-width:351px) {
+    .card {
+        width: 250px;
+    }
+
+    .skillWrapper {
+        flex-wrap: wrap;
+    }
+}</style>

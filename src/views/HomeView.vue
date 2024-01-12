@@ -29,27 +29,38 @@ export default {
 </script>
 
 <style scoped>
-img{
+img {
   box-shadow: 0 3px 5px #e9322e;
   margin-left: 50px;
 }
-.row{
+
+.row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 50px;
 }
-.col{
+
+.col {
   flex-basis: 50%;
 }
-.container h1{
-padding-top: 20px;
-padding-bottom:  20px;
-text-decoration: underline;
-text-shadow: 0 2px 1px black;
+
+.container h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-decoration: underline;
+  text-shadow: 0 2px 1px black;
 }
-.col h3{
+
+.col h3 {
   text-shadow: 0 2px 1px #e9322e;
 }
-</style>
+
+@media (max-width:351px) {
+  img {
+    box-shadow: 0 3px 5px #e9322e;
+    margin: 0;
+    margin-top: 15px;
+  }
+}</style>
