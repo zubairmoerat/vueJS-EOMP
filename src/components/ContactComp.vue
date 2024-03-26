@@ -33,6 +33,7 @@
                 </form>
             </div>
             <div class="contactCol">
+                <h3 class="text-center"><i class="bi bi-geo-alt"></i> District 6, Cape Town</h3>
                 <h3 class="text-center"><i class="bi bi-whatsapp"></i> +27 68 266 5739</h3>
                 <h3 class="text-center"><i class="bi bi-envelope"></i> moeratz02@outlook.com</h3>
             </div>

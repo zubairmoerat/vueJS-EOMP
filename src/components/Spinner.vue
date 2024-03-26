@@ -12,12 +12,6 @@
 export default {
     name: 'SpinnerComp',
     data() {
-        return {
-            loading: true,
-        };
-    },
-    mounted() {
-        setTimeout(() => { this.loading = false }, 500)
     }
 }
 </script>

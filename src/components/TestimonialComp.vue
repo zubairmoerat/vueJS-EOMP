@@ -5,11 +5,11 @@
             <input type="checkbox" class="flipcard">
             <div class="card">
                 <div class="front card-face">
-                    <img :src="testimonial.profile" alt="imgPerson" class="card-photo">
+                    <img :src="testimonial.image" alt="imgPerson" class="card-photo">
                 </div>
                 <div class="back card-face">
                     <h5>{{ testimonial.name }} {{ testimonial.surname }}</h5>
-                    <p class="text-center"><i class="bi bi-quote"></i>{{ testimonial.quotes }}<i class="bi bi-quote"></i>
+                    <p class="container-fluid text-center"><i class="bi bi-quote"></i>{{ testimonial.quote }}<i class="bi bi-quote"></i>
                     </p>
                 </div>
             </div>
