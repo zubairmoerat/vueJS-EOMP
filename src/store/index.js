@@ -1,29 +1,25 @@
 import { createStore } from 'vuex'
-const dataUrl = 'https://zubairmoerat.github.io/zubairmoeratData/data/'
+const dataUrl = 'https://zubairmoerat.github.io/finalresData/Data/'
 
 export default createStore({
   state: {
-    home: null,
-    about: null,
     education: null,
-    skills: null,
+    softskills: null,
+    techskills:null,
     testimonials: null,
     projects: null
   },
   getters: {
   },
   mutations: {
-    setHome(state, value) {
-      state.home = value
-    },
-    setAbout(state, value) {
-      state.about = value
-    },
     setEducation(state, value) {
       state.education = value
     },
-    setSkills(state, value) {
-      state.skills = value
+    setSoftskills(state, value) {
+      state.softskills = value
+    },
+    setTechskills(state, value){
+      state.techskills = value
     },
     setTestimonials(state, value) {
       state.testimonials = value
@@ -33,15 +29,6 @@ export default createStore({
     }
   },
   actions: {
-    async fetchHome(context) {
-      try {
-        let res = await fetch(dataUrl)
-        let { home } = await res.json()
-        context.commit('setHome', home)
-      } catch (e) {
-        console.error('Error fetching Data', e)
-      }
-    },
     async fetchEducation(context) {
       try {
         let res = await fetch(dataUrl)
@@ -51,12 +38,21 @@ export default createStore({
         console.error('Error fetching Data', e)
       }
     },
-    async fetchSkills(context) {
+    async fetchSoftskills(context) {
       try {
         let res = await fetch(dataUrl)
-        let { skills } = await res.json()
-        context.commit('setSkills', skills)
+        let { softskills } = await res.json()
+        context.commit('setSoftskills', softskills)
       } catch (e) {
+        console.error('Error fetching Data', e)
+      }
+    },
+    async fetchTechskills(context){
+      try{
+        let res = await fetch(dataUrl)
+        let {techskills} = await res.json()
+        context.commit('setTechskills', techskills)
+      }catch(e){
         console.error('Error fetching Data', e)
       }
     },

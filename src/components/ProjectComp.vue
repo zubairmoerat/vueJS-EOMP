@@ -5,12 +5,12 @@
             <div class="card" v-for="pro in Projects" :key="pro">
                 <div class="card-body text-center">
                     <img :src="pro.image" class="img-fluid" alt="projectImage">
-                    <h5 class="card-title text-center">{{ pro.name }}</h5>
-                    <p class="text-center">{{ pro.description }}</p>
-                    <a :href="pro.gitHub" type="button" class="btn" id="btn1" target="_blank"><i
-                            class="bi bi-github"></i></a>
-                    <a :href="pro.netlify" type="button" class="btn ms-3" id="btn2" target="_blank"><i
-                            class="bi bi-browser-chrome"></i></a>
+                    <h5 class="card-title text-center">{{ pro.assignment }}</h5>
+                    <p class="text-center">{{ pro.info }}</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a :href="pro.github" type="button" class="btn" id="btn1" target="_blank"><i class="bi bi-github"></i></a>
+                    <a :href="pro.livelink" type="button" class="btn ms-3" id="btn2" target="_blank"><i class="bi bi-browser-chrome"></i></a>
                 </div>
             </div>
         </div>

@@ -9,12 +9,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link fs-2 ps-5"><router-link to="/">Home</router-link></a>
-                        <a class="nav-link fs-2 ps-5"><router-link to="/about">About Me</router-link></a>
-                        <a class="nav-link fs-2 ps-5"><router-link to="/resume">Resume</router-link></a>
-                        <a class="nav-link fs-2 ps-5"><router-link to="/projects">Projects</router-link></a>
-                        <a class="nav-link fs-2 ps-5"><router-link to="/testimonials">Testimonials</router-link></a>
-                        <a class="nav-link fs-2 ps-5"><router-link to="/contact">Contact Me</router-link></a>
+                        <a class="nav-link fs-2 ps-5" href="#home">Home</a>
+                        <a class="nav-link fs-2 ps-5" href="#about">About Me</a>
+                        <a class="nav-link fs-2 ps-5" href="#resume">Resume</a>
+                        <a class="nav-link fs-2 ps-5" href="#projects">Projects</a>
+                        <a class="nav-link fs-2 ps-5" href="testimonials">Testimonials</a>
+                        <a class="nav-link fs-2 ps-5" href="contact">Contact Me</a>
                     </div>
                 </div>
             </div>
